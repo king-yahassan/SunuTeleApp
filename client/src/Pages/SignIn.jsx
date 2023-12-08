@@ -8,9 +8,11 @@ const SignIn = () => {
     const [data, setData] = useState({ email: "", password: "" });
     const [error, setError] = useState("");
 
-    const api_url = import.meta.env.VITE_REACT_API_URL;
+    const api_url = JSON.stringify(import.meta.env.VITE_REACT_API_URL)
+    // const api_url = import.meta.env.VITE_REACT_API_URL;
+
     // console.log(api_url)
-    // console.log(api_url);
+    // console.log(api_url)
 
     const handleChange = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
